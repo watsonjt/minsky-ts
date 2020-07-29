@@ -1,0 +1,3 @@
+### Setup
+1. compile minsky from the submodule/linked repo
+2. ... well I am working on it...

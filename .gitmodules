@@ -1,0 +1,3 @@
+[submodule "minsky"]
+	path = minsky
+	url = https://github.com/highperformancecoder/minsky.git
