@@ -1,8 +1,13 @@
+### What is this project...
+
+Its an attempt to understand the codebase, and work on a electron UI. At some point there 
+will be a implementation in rust...
+
 ### Graph analysis on minsky source
 
-[graphviz bmp](docs/minsky_graph_viz_no_cd_xcd.bmp)
+The dependency graph is in the docs folder (.dot) file.
 
-| Source                  |   Out-Degree-Centrality |   In-Degree-Centrality |   Weighted Avg |
+| Source                  |   Out-Degree-Centrality 2/3 |   In-Degree-Centrality 1/3 |   Weighted Avg |
 |-------------------------|-------------------------|------------------------|----------------|
 | minsky.h                |               0.252525  |              0.141414  |     0.215492   |
 | variable.h              |               0.111111  |              0.121212  |     0.114478   |
