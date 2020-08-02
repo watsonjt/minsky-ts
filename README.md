@@ -1,3 +1,7 @@
+### some hints
+
+* I spent entirely too long trying to use a json-spirit not from minskys repo, undefined symbols. So, if you dont want to get real familiar with binutils, go there.
+
 ### What is this project...
 
 Its an attempt to understand the codebase, and work on a electron UI. At some point there 
