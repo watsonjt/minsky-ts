@@ -1,4 +1,11 @@
-### some hints
+### To run this app
+
+#### In your terminal
+ 1. npm install
+ 2. spago install
+ 3. npm run dev
+
+### some hints on minsky
 
 * I spent entirely too long trying to use a json-spirit not from minskys repo, undefined symbols. So, if you dont want to get real familiar with binutils, go there.
 
