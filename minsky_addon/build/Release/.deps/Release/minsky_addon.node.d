@@ -1,1 +1,0 @@
-cmd_Release/minsky_addon.node := ln -f "Release/obj.target/minsky_addon.node" "Release/minsky_addon.node" 2>/dev/null || (rm -rf "Release/minsky_addon.node" && cp -af "Release/obj.target/minsky_addon.node" "Release/minsky_addon.node")
