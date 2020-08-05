@@ -7,7 +7,7 @@
 
 ### some hints on minsky
 
-* I spent entirely too long trying to use a json-spirit not from minskys repo, undefined symbols. So, if you dont want to get real familiar with binutils, go there.
+ * Read the install docs, use the json-spirit from the linux-repo HPC makes available. The json-spirit lib from other sources will not work.
 
 ### What is this project...
 
