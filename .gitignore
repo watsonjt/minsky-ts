@@ -3,5 +3,6 @@ dist
 *.log
 .*
 docs/*
+minsky_addon/build/*
 !/.gitignore
 !docs/minsky.dot
