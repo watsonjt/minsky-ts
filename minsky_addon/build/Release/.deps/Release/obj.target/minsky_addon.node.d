@@ -1,0 +1,1 @@
+cmd_Release/obj.target/minsky_addon.node := g++ -o Release/obj.target/minsky_addon.node -shared -pthread -rdynamic -m64  -Wl,-soname=minsky_addon.node -Wl,--start-group Release/obj.target/minsky_addon/minsky.o -Wl,--end-group 

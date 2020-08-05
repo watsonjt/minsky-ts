@@ -1,0 +1,12 @@
+{
+    "name": "minsky_addon",
+    "version": "0.0.0",
+    "description": "minsky system simulation addon",
+    "gypfile": true,
+    "main": "./build/Release/minsky_addon",
+    "license": "MIT",
+    "dependencies": {
+        "node-addon-api": "*",
+        "bindings": "*"
+    }
+}

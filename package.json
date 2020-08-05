@@ -3,8 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "keywords": [],
+  "author": "Jon Watson <jon@jonwatson.dev> (jonwatson.dev)",
+  "license": "MIT",
+  "private": true,
   "scripts": {
+    "dev": "electron-webpack dev",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "electronWebpack": {
+    "commonSourceDirectory": "src/common",
+    "staticSourceDirectory": "src/static",
+    "main": {
+      "sourceDirectory": "src/main",
+      "webpackConfig": "webpack.main.js"
+    },
+    "renderer": {
+      "sourceDirectory": "src/renderer",
+      "webpackConfig": "webpack.renderer.js"
+    },
+    "title": "Minsky Electron"
   },
   "jest": {
     "preset": "ts-jest",
@@ -20,18 +38,23 @@
       "ts-jest": {}
     }
   },
-  "keywords": [],
-  "author": "Jon Watson <jon@jonwatson.dev> (jonwatson.dev)",
-  "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^26.0.7",
-    "gulp": "^4.0.2",
-    "gulp-jest": "^4.0.3",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "jest": "^26.1.0",
+    "@types/electron": "^1.6.10",
+    "@types/jest": "^26.0.8",
+    "@types/webpack": "^4.41.21",
+    "awesome-typescript-loader": "^5.2.1",
+    "electron": "^9.1.2",
+    "electron-webpack": "^2.8.2",
+    "jest": "^26.2.2",
     "jest-cli": "24.9.0",
+    "node-loader": "^1.0.1",
+    "purs-loader": "^3.7.1",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }

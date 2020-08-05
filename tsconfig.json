@@ -1,13 +1,4 @@
 {
-	"compilerOptions": {
-		"noImplicitAny": true,
-		"sourceMap": true,
-		"outDir": "dist",
-		"baseUrl": "."
-	},
-	"paths": {
-		"@App/*": [
-			"src/**/*"
-        ]
-	}
+	"extends": "./node_modules/electron-webpack/tsconfig-base.json",
+	"allowJs": true
 }
