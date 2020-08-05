@@ -17,11 +17,9 @@ module.exports = function(config) {
           },
           src: ['src/renderer/**/*.purs'],
           spago:true,
-          output: path.join(process.cwd(), 'dist/renderer/[name].js')
+          output: path.join(process.cwd(), 'dist/renderer/ps')
         }
     })
-
-    console.log(JSON.stringify(config, null, 4))
-  
+    //console.log(JSON.stringify(config, null, 4))
     return config
   }
