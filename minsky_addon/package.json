@@ -5,6 +5,9 @@
     "gypfile": true,
     "main": "./build/Release/minsky_addon",
     "license": "MIT",
+    "scripts":{
+        "build": "node-gyp build --verbose"
+    },
     "dependencies": {
         "node-addon-api": "*",
         "bindings": "*"
