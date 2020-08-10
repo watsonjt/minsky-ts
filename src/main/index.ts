@@ -18,7 +18,7 @@ require('dotenv').config()
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
-const menu_filter = {
+const menu_filter = ({
   HIDE:(obj:{[index:string]:any})=>{
     if(obj.submenu === undefined
       && obj.label !== undefined
@@ -27,7 +27,8 @@ const menu_filter = {
     }
   },
   NONE:(obj:{[index:string]:any})=>{}
-}[process.env.MENU_FILTER]
+} as {[index:string]:any})[((process.env.MENU_FILTER !== undefined)?process.env.MENU_FILTER:"HIDE")]
+
 
 let mainWindow:BrowserWindow | null = null;
 
