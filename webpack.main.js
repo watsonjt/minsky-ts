@@ -1,22 +1,12 @@
-const { CheckerPlugin } = require('awesome-typescript-loader')
-
 module.exports = function(config) {
-    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MAIN CONFIG OBJECT<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+    //was using awesome-ts-loader earlier, but for w/e reason it was breaking
+    // the electron template menu from working... 
+    //switched to electron-webpack-ts which is setup as a loader automatically
 
-    //['.ts', '.tsx', '.js', '.jsx'].forEach(ext=>config.resolve.extensions.push(ext))
-    config.resolve.extensions.push('.ts')
-
-    config.devtool = 'source-map'
+    //disadvantages of using webpack-electron-ts is it uses ts-loader which
+    //  does not work with HMR
     
-    config.module.rules.push({
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
-      })
-    
-      config.plugins.push(
-          new CheckerPlugin()
-      )
-    console.log(JSON.stringify(config, null, 4))
+    //console.log(JSON.stringify(config, null, 4))
   
     return config
   }
