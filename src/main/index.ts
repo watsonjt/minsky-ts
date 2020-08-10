@@ -14,8 +14,20 @@ import path from 'path'
 import { format as formatUrl } from 'url'
 import {app, BrowserWindow, Menu, MenuItem , MenuItemConstructorOptions} from 'electron'
 
+require('dotenv').config()
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
+
+const menu_filter = {
+  HIDE:(obj:{[index:string]:any})=>{
+    if(obj.submenu === undefined
+      && obj.label !== undefined
+      && obj.click === undefined){
+      obj.visible = false
+    }
+  },
+  NONE:(obj:{[index:string]:any})=>{}
+}[process.env.MENU_FILTER]
 
 let mainWindow:BrowserWindow | null = null;
 
@@ -59,24 +71,18 @@ const createWindow =  ()=>{
   return window
 }
 
-const hide_unimplemented = (obj:{[index:string]:any})=>{
-  if(obj.submenu === undefined
-    && obj.label !== undefined
-    && obj.click === undefined){
-    obj.visible = false
-  }
-}
+
 
 app.on('ready', ()=>{
 
     const template:MenuItemConstructorOptions[] = [
-        require('@/menu/file').menu(hide_unimplemented),
-        require('@/menu/edit').menu(hide_unimplemented),
-        require('@/menu/bookmarks').menu(hide_unimplemented),
-        require('@/menu/insert').menu(hide_unimplemented),
-        require('@/menu/options').menu(hide_unimplemented),
-        require('@/menu/runge_kutta').menu(hide_unimplemented),
-        require('@/menu/help').menu(hide_unimplemented),
+        require('@/menu/file').menu(menu_filter),
+        require('@/menu/edit').menu(menu_filter),
+        require('@/menu/bookmarks').menu(menu_filter),
+        require('@/menu/insert').menu(menu_filter),
+        require('@/menu/options').menu(menu_filter),
+        require('@/menu/runge_kutta').menu(menu_filter),
+        require('@/menu/help').menu(menu_filter),
     ]
     mainWindow = createWindow();
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));

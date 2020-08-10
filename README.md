@@ -3,14 +3,14 @@
 #### In your terminal
  
  * Run the UI
-  1. npm install
-  2. spago install
+  1. spago install
+  2. npm install
   3. npm run dev
   
  * Compile minsky addon
   1. cd minsky_addon
-  2. npm install
-  3. install minsky dependencies
+  2. install minsky dependencies
+  3. npm install
   4. npm run build 
 
 ### some hints on minsky
